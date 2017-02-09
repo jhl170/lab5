@@ -4,7 +4,14 @@
 $(document).ready(function() {
 	initializePage();
 })
-
+$("h3").click(changeText);{
+}
+function changeText(event) {
+	event.preventDefault();
+	var currentName = $(this).text();
+	var changedName = anagrammedName(currentName);
+	$(this).text(changedName);
+}
 /*
  * Function that is called when the document is ready.
  */
